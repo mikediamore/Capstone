@@ -5,8 +5,9 @@ Industry Partner: Capital One
 
 Mentors: John Donich ,  Ceena Modarres
 
+## Purpose
 
-This page will be fluid with to-do's,progress
+This page will be fluid with to-do's,progress, and ideas.
 
 
 ## Progress:
