@@ -14,6 +14,8 @@ This page will be fluid with to-do's,progress, and ideas.
 
 Query Mechanism v0 - Simple First Pass at a query mechanism for querying GDELT, quandl and Yahoo
 
+Example Notebook Gdelt Events - A working example of the query mechanism in action with a rudimentary model. Used as toy example.
+
 ## To-Do:
 
 Determine what a market event is. 
