@@ -16,6 +16,10 @@ import json
 
 
 """
+##############
+README FIRST
+#############
+
 Goal:
 -----
 Create Python querying classes to aid the Capstone group in first pass 
@@ -150,6 +154,33 @@ class query_tool():
         """
         self.ticker = ticker
         
+        
+    
+    def __getattribute__(self,attr):
+        """
+        Useful bit of code, returns none if you call an attribute that doesn't
+        exist
+        """
+        
+        try:
+            return object.__getattribute__(self, attr)
+        except AttributeError:
+            return None
+        
+    def save_gdelt_df(self,name,save_type='csv',h5_dict_name=None):
+        """
+        Save down the gdelt_df given a name note the csv/h5 extension is not
+        needed as it's automatically appended
+        
+        For larger datasets we might want to save down as h5 so that's included
+        as well
+        """
+        
+        if save_type == 'csv':
+            self.gdelt_df.to_csv(name+'.csv')
+        elif save_type == 'h5':
+            self.gdelt_df.to_hdf(name+'.h5',h5_dict_name,format='table',mode='w')
+        
 def load_json(path):
     """
     Helper function to properly load a JSON
@@ -177,7 +208,7 @@ if __name__ == '__main__':
     
     
     example_query = """SELECT V2Tone,DATE FROM [gdelt-bq:gdeltv2.gkg] 
-                    where DATE > 20170801000000and DATE < 20170805000000 
+                    where DATE > 20170801000000and DATE < 20170803000000 
                     and V2Themes like '%WB_332%'
                     """
     test_tool.query_gdelt(example_query)
