@@ -16,6 +16,8 @@ Query Mechanism v0 - Simple First Pass at a query mechanism for querying GDELT, 
 
 Example Notebook Gdelt Events - A working example of the query mechanism with a rudimentary model. Used as toy example.
 
+Data Viz and DL - A notebook with some visualizations and a first pass at Deep learning
+
 ## To-Do:
 
 Determine what a market event is. 
@@ -24,7 +26,7 @@ Write Spark connectors if python connectors don't suffice
 
 Get everyone a GoogleBigQuery account and API Keys. Also Quandl if we feel that the FRED database or other database is worthwhile as a proxy for a market event
 
-Start exploring and visualizing the data
+### Start exploring and visualizing the data
 
 Come up with preliminary analysis to predict previously decided upon market events
 
