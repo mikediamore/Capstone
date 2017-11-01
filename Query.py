@@ -8,7 +8,6 @@ Created on Fri Oct  6 13:19:32 2017
 
 
 from pandas import read_gbq
-from google.cloud import bigquery
 import pandas as pd
 import pandas_datareader.data as web
 import quandl
@@ -141,7 +140,7 @@ class query_tool():
         
         self.api_code = api_code
         df = quandl.get(self.api_code, start_date=self.start_date, 
-                                            end_date=self.end_date)
+                                            end_date=self.end_date,authtoken=auth_key)
         self.quandl_df = df
         return(df)
         
